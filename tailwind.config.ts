@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -74,9 +73,14 @@ export default {
 					dark: '#5E1A1D'
 				},
 				cream: {
-					light: '#F8F4E9',
-					DEFAULT: '#F0E9D6',
-					dark: '#E5DACB'
+					light: '#F8F3D9', // New light cream color
+					DEFAULT: '#EBE5C2', // New default cream color
+					dark: '#D9D2AF'    // Slightly darker shade for contrast
+				},
+				champagne: {
+					light: '#F8F3D9', // Same as cream light
+					DEFAULT: '#EBE5C2', // Same as cream default
+					dark: '#D9D2AF'     // Same as cream dark
 				}
 			},
 			fontFamily: {

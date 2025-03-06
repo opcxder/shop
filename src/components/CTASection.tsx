@@ -7,7 +7,7 @@ const CTASection = () => {
   return (
     <section className="py-16 bg-gradient-to-r from-burgundy-dark via-burgundy to-burgundy-light">
       <div className="container mx-auto px-4 md:px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 text-white">Need Assistance with Your Project?</h2>
+        <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 text-cream-light">Need Assistance with Your Project?</h2>
         <p className="text-lg text-cream-light mb-8 max-w-2xl mx-auto">
           Our team of experienced professionals is ready to help you find the right products for your needs. Get in touch with us today.
         </p>
@@ -18,7 +18,7 @@ const CTASection = () => {
             </Button>
           </Link>
           <a href="tel:+919753255523">
-            <Button size="lg" variant="outline" className="border-cream-light text-cream-light hover:bg-white/10">
+            <Button size="lg" variant="outline" className="border-cream-light text-cream-light hover:bg-cream-light/10">
               <Phone className="mr-2 h-4 w-4" /> Call Now
             </Button>
           </a>
