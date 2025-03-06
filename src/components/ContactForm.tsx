@@ -13,6 +13,12 @@ import {
   FormLabel,
   FormMessage
 } from '@/components/ui/form';
+import { createClient } from '@supabase/supabase-js';
+
+// Initialize Supabase client
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || "";
+const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY || "";
+const supabase = createClient(supabaseUrl, supabaseKey);
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -32,17 +38,40 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
-      toast({
-        title: "Contact Request Sent",
-        description: "We will get back to you as soon as possible.",
-      });
+    try {
+      // Insert data into Supabase
+      if (supabaseUrl && supabaseKey) {
+        const { data, error } = await supabase
+          .from('contact_inquiries')
+          .insert([
+            { 
+              name: formData.name,
+              phone: formData.phone,
+              email: formData.email || null,
+              message: formData.message,
+              created_at: new Date().toISOString()
+            }
+          ]);
+          
+        if (error) throw error;
+          
+        console.log('Form submitted to Supabase:', data);
+        toast({
+          title: "Contact Request Sent",
+          description: "We will get back to you as soon as possible.",
+        });
+      } else {
+        // Fallback when no Supabase credentials
+        console.log('Supabase not configured. Form data:', formData);
+        toast({
+          title: "Contact Request Received",
+          description: "We will get back to you as soon as possible.",
+        });
+      }
       
       // Reset form
       setFormData({
@@ -51,9 +80,16 @@ const ContactForm = () => {
         email: '',
         message: '',
       });
-      
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Error",
+        description: "There was a problem submitting your request. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (
@@ -67,6 +103,7 @@ const ContactForm = () => {
             placeholder="Your name"
             value={formData.name}
             onChange={handleChange}
+            className="border-champagne-dark focus-visible:ring-gold"
             required
           />
         </div>
@@ -80,6 +117,7 @@ const ContactForm = () => {
             placeholder="Your phone number"
             value={formData.phone}
             onChange={handleChange}
+            className="border-champagne-dark focus-visible:ring-gold"
             required
           />
         </div>
@@ -94,6 +132,7 @@ const ContactForm = () => {
           placeholder="Your email address (optional)"
           value={formData.email}
           onChange={handleChange}
+          className="border-champagne-dark focus-visible:ring-gold"
         />
       </div>
       
@@ -106,13 +145,14 @@ const ContactForm = () => {
           rows={4}
           value={formData.message}
           onChange={handleChange}
+          className="border-champagne-dark focus-visible:ring-gold"
           required
         />
       </div>
       
       <Button
         type="submit"
-        className="w-full bg-navy hover:bg-navy-dark"
+        className="w-full bg-gradient-to-r from-gold to-gold-light hover:from-gold-dark hover:to-gold text-navy-dark"
         disabled={isSubmitting}
       >
         {isSubmitting ? 'Sending...' : 'Send Message'}

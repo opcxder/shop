@@ -64,14 +64,19 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				gold: {
-					light: '#D4AF37',
-					DEFAULT: '#CCA633',
-					dark: '#AA8C2C'
+					light: '#D4B467',
+					DEFAULT: '#BF9B30',
+					dark: '#9A7D23'
 				},
 				navy: {
-					light: '#294D77',
-					DEFAULT: '#1A365D',
-					dark: '#0F2442'
+					light: '#334A75',
+					DEFAULT: '#1F2D47',
+					dark: '#0E1526'
+				},
+				champagne: {
+					light: '#F8F4E9',
+					DEFAULT: '#F0E9D6',
+					dark: '#E5DACB'
 				}
 			},
 			fontFamily: {

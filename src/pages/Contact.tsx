@@ -10,10 +10,10 @@ const ContactPage = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow">
-        <div className="bg-navy text-white py-12">
+        <div className="bg-gradient-to-r from-navy-dark via-navy to-navy-light text-white py-12">
           <div className="container mx-auto px-4 md:px-6 text-center">
             <h1 className="text-3xl md:text-4xl font-serif font-bold mb-4">Contact Us</h1>
-            <p className="max-w-2xl mx-auto text-gray-200">
+            <p className="max-w-2xl mx-auto text-champagne-light">
               Get in touch with us for all your plumbing, sanitary, and electrical product needs.
             </p>
           </div>
@@ -23,7 +23,7 @@ const ContactPage = () => {
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               <div className="lg:col-span-1">
-                <Card className="h-full">
+                <Card className="h-full premium-card">
                   <CardContent className="p-6 space-y-6">
                     <h2 className="text-xl font-serif font-semibold text-navy-dark">Contact Information</h2>
                     
@@ -35,6 +35,14 @@ const ContactPage = () => {
                           <p className="text-gray-600">
                             Infront of Bank of India, Main road Thikri, Dist. Barwani, Madhya Pradesh, 451660
                           </p>
+                          <a 
+                            href="https://maps.app.goo.gl/u7pNNDivRtJaiSBH7" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="text-gold hover:underline text-sm mt-1 inline-block"
+                          >
+                            View on Google Maps (3C82+C3 Thikri)
+                          </a>
                         </div>
                       </div>
                       
@@ -66,8 +74,7 @@ const ContactPage = () => {
                         <Clock className="h-5 w-5 text-gold shrink-0 mt-1" />
                         <div className="ml-3">
                           <h3 className="font-medium text-navy-dark">Business Hours</h3>
-                          <p className="text-gray-600">Monday - Saturday: 9:00 AM - 7:00 PM</p>
-                          <p className="text-gray-600">Sunday: Closed</p>
+                          <p className="text-gray-600">Monday - Sunday: 9:00 AM - 7:00 PM</p>
                         </div>
                       </div>
                     </div>
@@ -76,7 +83,7 @@ const ContactPage = () => {
               </div>
               
               <div className="lg:col-span-2">
-                <Card>
+                <Card className="premium-card">
                   <CardContent className="p-6">
                     <h2 className="text-xl font-serif font-semibold text-navy-dark mb-6">Send Us a Message</h2>
                     <ContactForm />
@@ -86,6 +93,20 @@ const ContactPage = () => {
             </div>
           </div>
         </section>
+        
+        <div className="w-full h-[400px] relative">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3693.7075831853813!2d75.39742799999999!3d22.218611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962021f3e6a43c1%3A0xc1bb0c1c7f35e30c!2s3C82%2BC3%20Thikri%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1717175001234!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Vinayak Enterprises Location"
+            className="absolute inset-0"
+          ></iframe>
+        </div>
       </main>
       <Footer />
     </div>

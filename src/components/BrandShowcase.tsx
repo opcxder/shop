@@ -20,7 +20,7 @@ const BrandShowcase = () => {
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="section-title text-center mx-auto mb-12">Brands We Trust</h2>
         
-        <Card className="border border-gray-200">
+        <Card className="border border-champagne-dark shadow-md">
           <CardContent className="p-8">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
               {brands.map((brand, index) => (
@@ -31,7 +31,7 @@ const BrandShowcase = () => {
                   <div className="flex items-center justify-center h-16 w-full">
                     <h3 className="text-xl font-serif font-semibold text-navy">{brand.logo}</h3>
                   </div>
-                  <Separator className="my-2 bg-gray-200" />
+                  <Separator className="my-2 bg-champagne-dark" />
                   <p className="text-gray-600 text-sm mt-2">{brand.name}</p>
                 </div>
               ))}
