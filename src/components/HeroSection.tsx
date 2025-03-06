@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
-    <div className="relative bg-gradient-to-r from-navy via-navy-dark to-navy text-white py-20 md:py-28">
+    <div className="relative bg-gradient-to-r from-burgundy via-burgundy-dark to-burgundy text-white py-20 md:py-28">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4 animate-fade-in">
@@ -15,7 +15,7 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in" style={{animationDelay: '0.4s'}}>
             <Link to="/products">
-              <Button size="lg" className="bg-gold hover:bg-gold-dark text-navy-dark font-medium">
+              <Button size="lg" className="bg-gold hover:bg-gold-dark text-burgundy-dark font-medium">
                 Browse Products
               </Button>
             </Link>

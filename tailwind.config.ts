@@ -68,12 +68,12 @@ export default {
 					DEFAULT: '#BF9B30',
 					dark: '#9A7D23'
 				},
-				navy: {
-					light: '#334A75',
-					DEFAULT: '#1F2D47',
-					dark: '#0E1526'
+				burgundy: {
+					light: '#9E4244',
+					DEFAULT: '#7E2629',
+					dark: '#5E1A1D'
 				},
-				champagne: {
+				cream: {
 					light: '#F8F4E9',
 					DEFAULT: '#F0E9D6',
 					dark: '#E5DACB'

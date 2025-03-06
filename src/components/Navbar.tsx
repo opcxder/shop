@@ -17,7 +17,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2">
-            <h1 className="font-serif text-2xl font-bold text-navy-dark">
+            <h1 className="font-serif text-2xl font-bold text-burgundy-dark">
               Vinayak <span className="text-gold">Enterprises</span>
             </h1>
           </Link>
@@ -26,24 +26,24 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-8 items-center">
             <Link 
               to="/" 
-              className="text-navy-dark hover:text-gold transition-colors font-medium"
+              className="text-burgundy-dark hover:text-gold transition-colors font-medium"
             >
               Home
             </Link>
             <Link 
               to="/products" 
-              className="text-navy-dark hover:text-gold transition-colors font-medium"
+              className="text-burgundy-dark hover:text-gold transition-colors font-medium"
             >
               Products
             </Link>
             <Link 
               to="/about" 
-              className="text-navy-dark hover:text-gold transition-colors font-medium"
+              className="text-burgundy-dark hover:text-gold transition-colors font-medium"
             >
               About Us
             </Link>
             <Link to="/contact">
-              <Button className="bg-navy hover:bg-navy-dark text-white">
+              <Button className="bg-burgundy hover:bg-burgundy-dark text-white">
                 Contact Us
               </Button>
             </Link>
@@ -72,21 +72,21 @@ const Navbar = () => {
           <div className="flex flex-col space-y-4 py-6 px-4">
             <Link 
               to="/" 
-              className="text-navy-dark hover:text-gold transition-colors py-2 font-medium"
+              className="text-burgundy-dark hover:text-gold transition-colors py-2 font-medium"
               onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
             <Link 
               to="/products" 
-              className="text-navy-dark hover:text-gold transition-colors py-2 font-medium"
+              className="text-burgundy-dark hover:text-gold transition-colors py-2 font-medium"
               onClick={() => setIsOpen(false)}
             >
               Products
             </Link>
             <Link 
               to="/about" 
-              className="text-navy-dark hover:text-gold transition-colors py-2 font-medium"
+              className="text-burgundy-dark hover:text-gold transition-colors py-2 font-medium"
               onClick={() => setIsOpen(false)}
             >
               About Us
@@ -95,7 +95,7 @@ const Navbar = () => {
               to="/contact"
               onClick={() => setIsOpen(false)}
             >
-              <Button className="w-full bg-navy hover:bg-navy-dark text-white">
+              <Button className="w-full bg-burgundy hover:bg-burgundy-dark text-white">
                 Contact Us
               </Button>
             </Link>

@@ -88,7 +88,7 @@ const ContactForm = () => {
             placeholder="Your name"
             value={formData.name}
             onChange={handleChange}
-            className="border-champagne-dark focus-visible:ring-gold"
+            className="border-cream-dark focus-visible:ring-gold"
             required
           />
         </div>
@@ -102,7 +102,7 @@ const ContactForm = () => {
             placeholder="Your phone number"
             value={formData.phone}
             onChange={handleChange}
-            className="border-champagne-dark focus-visible:ring-gold"
+            className="border-cream-dark focus-visible:ring-gold"
             required
           />
         </div>
@@ -117,7 +117,7 @@ const ContactForm = () => {
           placeholder="Your email address (optional)"
           value={formData.email}
           onChange={handleChange}
-          className="border-champagne-dark focus-visible:ring-gold"
+          className="border-cream-dark focus-visible:ring-gold"
         />
       </div>
       
@@ -130,14 +130,14 @@ const ContactForm = () => {
           rows={4}
           value={formData.message}
           onChange={handleChange}
-          className="border-champagne-dark focus-visible:ring-gold"
+          className="border-cream-dark focus-visible:ring-gold"
           required
         />
       </div>
       
       <Button
         type="submit"
-        className="w-full bg-gradient-to-r from-gold to-gold-light hover:from-gold-dark hover:to-gold text-navy-dark"
+        className="w-full bg-gradient-to-r from-gold to-gold-light hover:from-gold-dark hover:to-gold text-burgundy-dark"
         disabled={isSubmitting}
       >
         {isSubmitting ? 'Sending...' : 'Send Message'}

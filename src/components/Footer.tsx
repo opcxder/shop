@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-navy text-white pt-12 pb-6">
+    <footer className="bg-burgundy text-white pt-12 pb-6">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
@@ -68,8 +68,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Phone className="mr-2 h-5 w-5 text-gold" />
-                <a href="tel:+918889371921" className="text-gray-300 hover:text-gold transition-colors">
-                  +91 8889371921
+                <a href="tel:+919753255523" className="text-gray-300 hover:text-gold transition-colors">
+                  +91 9753255523
                 </a>
               </li>
               <li className="flex items-center">
