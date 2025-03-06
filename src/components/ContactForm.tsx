@@ -13,12 +13,7 @@ import {
   FormLabel,
   FormMessage
 } from '@/components/ui/form';
-import { createClient } from '@supabase/supabase-js';
-
-// Initialize Supabase client
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || "";
-const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY || "";
-const supabase = createClient(supabaseUrl, supabaseKey);
+import { supabase } from '@/integrations/supabase/client';
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -44,34 +39,24 @@ const ContactForm = () => {
     
     try {
       // Insert data into Supabase
-      if (supabaseUrl && supabaseKey) {
-        const { data, error } = await supabase
-          .from('contact_inquiries')
-          .insert([
-            { 
-              name: formData.name,
-              phone: formData.phone,
-              email: formData.email || null,
-              message: formData.message,
-              created_at: new Date().toISOString()
-            }
-          ]);
-          
-        if (error) throw error;
-          
-        console.log('Form submitted to Supabase:', data);
-        toast({
-          title: "Contact Request Sent",
-          description: "We will get back to you as soon as possible.",
-        });
-      } else {
-        // Fallback when no Supabase credentials
-        console.log('Supabase not configured. Form data:', formData);
-        toast({
-          title: "Contact Request Received",
-          description: "We will get back to you as soon as possible.",
-        });
-      }
+      const { data, error } = await supabase
+        .from('contact_inquiries')
+        .insert([
+          { 
+            name: formData.name,
+            phone: formData.phone,
+            email: formData.email || null,
+            message: formData.message
+          }
+        ]);
+        
+      if (error) throw error;
+        
+      console.log('Form submitted to Supabase:', data);
+      toast({
+        title: "Contact Request Sent",
+        description: "We will get back to you as soon as possible.",
+      });
       
       // Reset form
       setFormData({
