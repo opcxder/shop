@@ -5,25 +5,25 @@ import { Droplet, Lightbulb, Cable } from 'lucide-react';
 
 const categories = [
   {
-    id: 'plumbing',
-    title: 'Plumbing Solutions',
-    icon: Droplet,
-    description: 'High-quality pipes, fittings, and accessories for all your plumbing needs.',
-    imageUrl: '/lovable-uploads/e9d2874e-81f4-4dd7-8bfa-9426454d9210.png',
-  },
-  {
     id: 'electrical',
     title: 'Electrical Products',
     icon: Lightbulb,
     description: 'Top brand switches, wires, and LED lighting solutions for residential and commercial spaces.',
-    imageUrl: '/lovable-uploads/1dc766dc-6f49-45b9-822b-7d48b7a88ad8.png',
+    imageUrl: '/lovable-uploads/7e3c1515-d36d-4130-af7b-8d074841e924.png',
+  },
+  {
+    id: 'plumbing',
+    title: 'Plumbing Solutions',
+    icon: Droplet,
+    description: 'High-quality pipes, fittings, and accessories for all your plumbing needs.',
+    imageUrl: '/lovable-uploads/e5469ed6-e032-4a70-bc9c-47db106508af.png',
   },
   {
     id: 'sanitary',
     title: 'Sanitary Ware',
     icon: Cable,
     description: 'Premium sanitary fittings, bathroom accessories, and related products.',
-    imageUrl: '/lovable-uploads/4d70858a-c5e3-4a0b-bafe-578b418c1c97.png',
+    imageUrl: '/lovable-uploads/688b8e5c-2af4-4221-ad65-b86bd8d80dfb.png',
   },
 ];
 

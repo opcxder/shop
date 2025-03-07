@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 @tailwind base;
@@ -100,11 +101,11 @@
 
 @layer components {
   .section-title {
-    @apply font-serif text-3xl md:text-4xl font-semibold mb-6 text-burgundy-dark relative inline-block after:content-[''] after:absolute after:w-1/2 after:h-0.5 after:bg-gold after:bottom-0 after:left-0 pb-2;
+    @apply font-serif text-3xl md:text-4xl font-semibold mb-6 text-navy-dark relative inline-block after:content-[''] after:absolute after:w-1/2 after:h-0.5 after:bg-gold after:bottom-0 after:left-0 pb-2;
   }
   
   .gradient-bg {
-    @apply bg-gradient-to-r from-burgundy to-burgundy-light text-cream-light;
+    @apply bg-gradient-to-r from-navy to-navy-light text-cream-light;
   }
   
   .premium-card {
@@ -112,6 +113,6 @@
   }
   
   .premium-btn {
-    @apply bg-gradient-to-r from-gold-dark to-gold text-burgundy-dark shadow-md hover:shadow-lg transition-all duration-300;
+    @apply bg-gradient-to-r from-gold-dark to-gold text-navy-dark shadow-md hover:shadow-lg transition-all duration-300;
   }
 }

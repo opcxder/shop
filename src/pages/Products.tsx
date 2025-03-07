@@ -7,26 +7,6 @@ import CTASection from '@/components/CTASection';
 
 const productCategories = [
   {
-    id: 'plumbing',
-    title: 'Plumbing Solutions',
-    icon: Droplet,
-    description: 'High-quality pipes, fittings, and accessories for all your plumbing needs.',
-    products: [
-      'PVC Pipes & Fittings',
-      'CPVC Pipes & Fittings',
-      'UPVC Pipes & Fittings',
-      'GI Pipes & Fittings',
-      'PEX Pipes',
-      'PPR Pipes',
-      'Bathroom Fittings',
-      'Valves & Controls',
-      'Water Tanks',
-      'Water Pumps'
-    ],
-    brands: ['Astral', 'Ashirvad', 'Finolex', 'Kisan'],
-    imageUrl: '/lovable-uploads/e9d2874e-81f4-4dd7-8bfa-9426454d9210.png',
-  },
-  {
     id: 'electrical',
     title: 'Electrical Products',
     icon: Lightbulb,
@@ -44,7 +24,27 @@ const productCategories = [
       'Stabilizers'
     ],
     brands: ['Havells', 'V-Guard', 'Finolex', 'Bajaj', 'Western'],
-    imageUrl: '/lovable-uploads/1dc766dc-6f49-45b9-822b-7d48b7a88ad8.png',
+    imageUrl: '/lovable-uploads/7e3c1515-d36d-4130-af7b-8d074841e924.png',
+  },
+  {
+    id: 'plumbing',
+    title: 'Plumbing Solutions',
+    icon: Droplet,
+    description: 'High-quality pipes, fittings, and accessories for all your plumbing needs.',
+    products: [
+      'PVC Pipes & Fittings',
+      'CPVC Pipes & Fittings',
+      'UPVC Pipes & Fittings',
+      'GI Pipes & Fittings',
+      'PEX Pipes',
+      'PPR Pipes',
+      'Bathroom Fittings',
+      'Valves & Controls',
+      'Water Tanks',
+      'Water Pumps'
+    ],
+    brands: ['Astral', 'Ashirvad', 'Finolex', 'Kisan'],
+    imageUrl: '/lovable-uploads/e5469ed6-e032-4a70-bc9c-47db106508af.png',
   },
   {
     id: 'sanitary',
@@ -64,7 +64,7 @@ const productCategories = [
       'Waste Couplings'
     ],
     brands: ['Astral', 'Texmo', 'Western'],
-    imageUrl: '/lovable-uploads/4d70858a-c5e3-4a0b-bafe-578b418c1c97.png',
+    imageUrl: '/lovable-uploads/688b8e5c-2af4-4221-ad65-b86bd8d80dfb.png',
   },
 ];
 

@@ -6,20 +6,20 @@ const testimonials = [
   {
     id: 1,
     name: 'Rajesh Sharma',
-    role: 'Local Contractor',
-    text: 'I have been sourcing all my plumbing materials from Vinayak Enterprises for the past 10 years. Their product quality and service are unmatched in the region.',
+    role: 'Homeowner',
+    text: 'When renovating my home, I sourced all my plumbing materials from Vinayak Enterprises. Their product quality and customer service are unmatched in the region.',
   },
   {
     id: 2,
     name: 'Priya Patel',
     role: 'Homeowner',
-    text: 'When renovating our home, we needed quality electrical supplies. The team at Vinayak Enterprises guided us through the entire process, recommending the best products within our budget.',
+    text: 'We needed quality electrical supplies for our new house. The team at Vinayak Enterprises guided us through the entire process, recommending the best products within our budget.',
   },
   {
     id: 3,
     name: 'Sunil Verma',
-    role: 'Project Manager',
-    text: 'For our commercial project, we required bulk supplies of various electrical and plumbing items. Vinayak Enterprises delivered everything on time and at competitive prices.',
+    role: 'Homeowner',
+    text: 'For our bathroom renovation, we required various sanitary and plumbing items. Vinayak Enterprises delivered everything on time and at competitive prices. Highly recommended!',
   },
 ];
 

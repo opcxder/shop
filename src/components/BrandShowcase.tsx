@@ -1,9 +1,8 @@
 
 import { Card, CardContent } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
 
 const brands = [
-  { name: 'Astral', logo: 'Astral' },
+  { name: 'Astral', logo: '/public/lovable-uploads/39a5d452-7310-44f3-a0eb-1708c8ebf922.png' },
   { name: 'Havells', logo: 'Havells' },
   { name: 'V-Guard', logo: 'V-Guard' },
   { name: 'Finolex', logo: 'Finolex' },
@@ -22,17 +21,22 @@ const BrandShowcase = () => {
         
         <Card className="border border-champagne-dark shadow-md">
           <CardContent className="p-8">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
               {brands.map((brand, index) => (
                 <div 
                   key={index}
-                  className="flex flex-col items-center justify-center p-4 transition-all duration-300 hover:scale-105"
+                  className="flex flex-col items-center justify-center bg-white rounded-lg p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:scale-105"
                 >
-                  <div className="flex items-center justify-center h-16 w-full">
-                    <h3 className="text-xl font-serif font-semibold text-navy">{brand.logo}</h3>
+                  <div className="flex items-center justify-center h-16 w-full mb-3">
+                    {typeof brand.logo === 'string' && brand.logo.startsWith('/') ? (
+                      <img src={brand.logo} alt={brand.name} className="h-12 object-contain" />
+                    ) : (
+                      <div className="bg-navy-light/10 text-navy px-4 py-2 rounded-md font-semibold">
+                        {brand.logo}
+                      </div>
+                    )}
                   </div>
-                  <Separator className="my-2 bg-champagne-dark" />
-                  <p className="text-gray-600 text-sm mt-2">{brand.name}</p>
+                  <p className="text-navy-dark font-medium text-center">{brand.name}</p>
                 </div>
               ))}
             </div>

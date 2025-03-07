@@ -5,7 +5,7 @@ import { Phone } from 'lucide-react';
 
 const CTASection = () => {
   return (
-    <section className="py-16 bg-gradient-to-r from-burgundy-dark via-burgundy to-burgundy-light">
+    <section className="py-16 bg-gradient-to-r from-navy-dark via-navy to-navy-light">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 text-cream-light">Need Assistance with Your Project?</h2>
         <p className="text-lg text-cream-light mb-8 max-w-2xl mx-auto">
@@ -13,7 +13,7 @@ const CTASection = () => {
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <Link to="/contact">
-            <Button size="lg" className="bg-gradient-to-r from-gold to-gold-light hover:from-gold-dark hover:to-gold text-burgundy-dark font-medium shadow-lg">
+            <Button size="lg" className="bg-gradient-to-r from-gold to-gold-light hover:from-gold-dark hover:to-gold text-navy-dark font-medium shadow-lg">
               Contact Us
             </Button>
           </Link>
