@@ -48,22 +48,22 @@
   }
 
   .dark {
-    --background: 20 40% 10%;
+    --background: 20 20% 10%;
     --foreground: 30 30% 98%;
 
-    --card: 20 40% 12%;
+    --card: 20 20% 12%;
     --card-foreground: 30 30% 98%;
 
-    --popover: 20 40% 12%;
+    --popover: 20 20% 12%;
     --popover-foreground: 30 30% 98%;
 
     --primary: 36 60% 47%;
-    --primary-foreground: 20 40% 15%;
+    --primary-foreground: 20 20% 15%;
 
-    --secondary: 20 30% 20%;
+    --secondary: 20 20% 20%;
     --secondary-foreground: 30 30% 98%;
 
-    --muted: 20 30% 20%;
+    --muted: 20 20% 20%;
     --muted-foreground: 30 10% 70%;
 
     --accent: 36 60% 47%;
@@ -72,8 +72,8 @@
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 30 30% 98%;
 
-    --border: 20 30% 20%;
-    --input: 20 30% 20%;
+    --border: 20 20% 20%;
+    --input: 20 20% 20%;
     --ring: 36 60% 47%;
     
     --sidebar-background: 20 5.9% 10%;
@@ -101,11 +101,11 @@
 
 @layer components {
   .section-title {
-    @apply font-serif text-3xl md:text-4xl font-semibold mb-6 text-navy-dark relative inline-block after:content-[''] after:absolute after:w-1/2 after:h-0.5 after:bg-gold after:bottom-0 after:left-0 pb-2;
+    @apply font-serif text-3xl md:text-4xl font-semibold mb-6 text-gray-900 relative inline-block after:content-[''] after:absolute after:w-1/2 after:h-0.5 after:bg-gold after:bottom-0 after:left-0 pb-2;
   }
   
   .gradient-bg {
-    @apply bg-gradient-to-r from-navy to-navy-light text-cream-light;
+    @apply bg-gradient-to-r from-gray-800 to-gray-900 text-white;
   }
   
   .premium-card {
@@ -113,6 +113,6 @@
   }
   
   .premium-btn {
-    @apply bg-gradient-to-r from-gold-dark to-gold text-navy-dark shadow-md hover:shadow-lg transition-all duration-300;
+    @apply bg-gradient-to-r from-gold-dark to-gold text-gray-900 shadow-md hover:shadow-lg transition-all duration-300;
   }
 }
