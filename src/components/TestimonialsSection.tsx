@@ -25,22 +25,22 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-cream-light">
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="section-title text-center mx-auto mb-12">What Our Customers Say</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial) => (
-            <Card key={testimonial.id} className="border-transparent hover:border-gold/30 transition-all duration-300">
+            <Card key={testimonial.id} className="border-transparent hover:border-gold/30 transition-all duration-300 bg-white">
               <CardContent className="p-6">
                 <Quote className="h-8 w-8 text-gold/40 mb-4" />
                 <p className="text-gray-600 mb-6 italic">"{testimonial.text}"</p>
                 <div className="flex items-center">
-                  <div className="h-10 w-10 rounded-full bg-navy flex items-center justify-center text-white">
+                  <div className="h-10 w-10 rounded-full bg-gold/80 flex items-center justify-center text-white">
                     {testimonial.name.charAt(0)}
                   </div>
                   <div className="ml-3">
-                    <h4 className="font-medium text-navy-dark">{testimonial.name}</h4>
+                    <h4 className="font-medium text-gray-800">{testimonial.name}</h4>
                     <p className="text-sm text-gray-500">{testimonial.role}</p>
                   </div>
                 </div>

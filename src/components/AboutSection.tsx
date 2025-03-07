@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const AboutSection = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
@@ -17,7 +17,7 @@ const AboutSection = () => {
               We take pride in our extensive inventory of high-quality products from renowned brands and our commitment to outstanding customer service. Our experienced team is always ready to assist you with product selection, technical advice, and after-sales support.
             </p>
             <Link to="/about">
-              <Button variant="outline" className="border-navy text-navy hover:bg-navy hover:text-white">
+              <Button variant="outline" className="border-gray-500 text-gray-700 hover:bg-gray-100">
                 Learn More <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
