@@ -5,7 +5,7 @@ import { Phone } from 'lucide-react';
 
 const CTASection = () => {
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16 bg-gray-200">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 text-gray-800">Need Assistance with Your Project?</h2>
         <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">

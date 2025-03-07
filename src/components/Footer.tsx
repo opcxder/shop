@@ -4,11 +4,11 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-50 text-gray-800 pt-12 pb-6 border-t border-gray-200">
+    <footer className="bg-gray-200 text-gray-800 pt-12 pb-6 border-t border-gray-300">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-serif font-semibold mb-4 pb-2 border-b border-gray-200">
+            <h3 className="text-xl font-serif font-semibold mb-4 pb-2 border-b border-gray-300">
               Vinayak Enterprises
             </h3>
             <p className="text-gray-600 mb-4">
@@ -20,7 +20,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-xl font-serif font-semibold mb-4 pb-2 border-b border-gray-200">
+            <h3 className="text-xl font-serif font-semibold mb-4 pb-2 border-b border-gray-300">
               Quick Links
             </h3>
             <ul className="space-y-2">
@@ -48,7 +48,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-xl font-serif font-semibold mb-4 pb-2 border-b border-gray-200">
+            <h3 className="text-xl font-serif font-semibold mb-4 pb-2 border-b border-gray-300">
               Contact Information
             </h3>
             <ul className="space-y-3">
@@ -86,7 +86,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="mt-12 pt-4 border-t border-gray-200 text-center text-gray-500 text-sm">
+        <div className="mt-12 pt-4 border-t border-gray-300 text-center text-gray-500 text-sm">
           <p>© {new Date().getFullYear()} Vinayak Enterprises. All rights reserved. Established 1996.</p>
         </div>
       </div>

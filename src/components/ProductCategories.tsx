@@ -29,7 +29,7 @@ const categories = [
 
 const ProductCategories = () => {
   return (
-    <section className="py-16 bg-champagne-light">
+    <section className="py-16 bg-champagne-dark">
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="section-title text-center mx-auto mb-12">Our Product Categories</h2>
         
