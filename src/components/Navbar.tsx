@@ -22,7 +22,7 @@ const Navbar = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="py-4 bg-gray-200 shadow-sm sticky top-0 z-50">
+    <nav className="py-4 bg-gray-300 shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2">
@@ -84,7 +84,7 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <div 
           className={cn(
-            "fixed md:hidden top-[60px] left-0 right-0 bg-gray-200 shadow-md z-40 transition-all duration-300 ease-in-out",
+            "fixed md:hidden top-[60px] left-0 right-0 bg-gray-300 shadow-md z-40 transition-all duration-300 ease-in-out",
             isOpen ? "max-h-screen py-4 opacity-100" : "max-h-0 py-0 opacity-0 overflow-hidden"
           )}
         >

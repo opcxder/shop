@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
-    <div className="relative bg-gray-100 text-gray-900 py-20 md:py-28 border-b border-gray-200">
+    <div className="relative bg-gray-200 text-gray-900 py-20 md:py-28 border-b border-gray-200">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4 animate-fade-in text-gray-800">
@@ -20,7 +20,7 @@ const HeroSection = () => {
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-gray-400 text-gray-800 hover:bg-gray-100 w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="border-gray-400 text-gray-800 hover:bg-gray-200 w-full sm:w-auto">
                 Contact Us
               </Button>
             </Link>
