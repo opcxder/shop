@@ -15,12 +15,12 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in" style={{animationDelay: '0.4s'}}>
             <Link to="/products">
-              <Button size="lg" className="bg-gold hover:bg-gold-dark text-gray-900 font-medium">
+              <Button size="lg" className="bg-gold hover:bg-gold-dark text-gray-900 font-medium w-full sm:w-auto">
                 Browse Products
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-gray-400 text-gray-800 hover:bg-gray-100">
+              <Button size="lg" variant="outline" className="border-gray-400 text-gray-800 hover:bg-gray-100 w-full sm:w-auto">
                 Contact Us
               </Button>
             </Link>
