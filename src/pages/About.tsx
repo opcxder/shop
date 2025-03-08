@@ -33,27 +33,27 @@ const AboutPage = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow">
-        <div className="bg-navy text-white py-12">
+        <div className="bg-gray-200 text-gray-900 py-12">
           <div className="container mx-auto px-4 md:px-6 text-center">
-            <h1 className="text-3xl md:text-4xl font-serif font-bold mb-4">About Us</h1>
-            <p className="max-w-2xl mx-auto text-gray-200">
+            <h1 className="text-3xl md:text-4xl font-serif font-bold mb-4 text-gray-900">About Us</h1>
+            <p className="max-w-2xl mx-auto text-gray-800">
               Learn about our journey, mission, and what makes Vinayak Enterprises the trusted name in plumbing and electrical supplies.
             </p>
           </div>
         </div>
 
-        <section className="py-16">
+        <section className="py-16 bg-gray-100">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
               <div>
-                <h2 className="section-title">Our Story</h2>
-                <p className="text-gray-600 mb-4">
+                <h2 className="section-title text-gray-900">Our Story</h2>
+                <p className="text-gray-700 mb-4">
                   Vinayak Enterprises was established in 1997 with a simple vision: to provide high-quality plumbing, sanitary, and electrical products to the people of Thikri and surrounding areas. What began as a small shop has now grown into a trusted destination for both residential and commercial customers seeking quality hardware solutions.
                 </p>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-700 mb-4">
                   For over 25 years, we have maintained our commitment to excellence, building lasting relationships with our customers and suppliers. Our founder's dedication to customer satisfaction and product quality continues to guide our business philosophy today.
                 </p>
-                <p className="text-gray-600">
+                <p className="text-gray-700">
                   As we have grown, we have expanded our product range to include the latest innovations in plumbing and electrical technologies, while maintaining our core values of integrity, quality, and exceptional service.
                 </p>
               </div>
@@ -71,14 +71,14 @@ const AboutPage = () => {
             </div>
             
             <div className="mb-16">
-              <h2 className="section-title text-center mx-auto mb-12">Why Choose Us</h2>
+              <h2 className="section-title text-center mx-auto mb-12 text-gray-900">Why Choose Us</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {features.map((feature, index) => (
                   <Card key={index} className="border-transparent hover:border-gold/30 transition-all duration-300">
                     <CardContent className="p-6 text-center">
                       <feature.icon className="h-12 w-12 text-gold mx-auto mb-4" />
-                      <h3 className="text-xl font-serif font-semibold text-navy-dark mb-3">{feature.title}</h3>
-                      <p className="text-gray-600">{feature.description}</p>
+                      <h3 className="text-xl font-serif font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                      <p className="text-gray-700">{feature.description}</p>
                     </CardContent>
                   </Card>
                 ))}
@@ -86,10 +86,10 @@ const AboutPage = () => {
             </div>
             
             <div>
-              <h2 className="section-title text-center mx-auto mb-12">Our Mission</h2>
+              <h2 className="section-title text-center mx-auto mb-12 text-gray-900">Our Mission</h2>
               <Card>
                 <CardContent className="p-8 text-center">
-                  <p className="text-xl text-gray-600 italic max-w-3xl mx-auto">
+                  <p className="text-xl text-gray-700 italic max-w-3xl mx-auto">
                     "To provide our customers with the highest quality plumbing, sanitary, and electrical products, backed by exceptional service, expert advice, and competitive pricing."
                   </p>
                 </CardContent>

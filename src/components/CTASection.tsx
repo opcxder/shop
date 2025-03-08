@@ -7,8 +7,8 @@ const CTASection = () => {
   return (
     <section className="py-16 bg-gray-200">
       <div className="container mx-auto px-4 md:px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 text-gray-800">Need Assistance with Your Project?</h2>
-        <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 text-gray-900">Need Assistance with Your Project?</h2>
+        <p className="text-lg text-gray-800 mb-8 max-w-2xl mx-auto">
           Our team of experienced professionals is ready to help you find the right products for your needs. Get in touch with us today.
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">

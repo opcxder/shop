@@ -73,16 +73,16 @@ const ProductsPage = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow">
-        <div className="bg-gradient-to-r from-navy-dark via-navy to-navy-light text-white py-12">
+        <div className="bg-gray-200 text-gray-900 py-12">
           <div className="container mx-auto px-4 md:px-6 text-center">
-            <h1 className="text-3xl md:text-4xl font-serif font-bold mb-4">Our Products</h1>
-            <p className="max-w-2xl mx-auto text-champagne-light">
+            <h1 className="text-3xl md:text-4xl font-serif font-bold mb-4 text-gray-900">Our Products</h1>
+            <p className="max-w-2xl mx-auto text-gray-800">
               Explore our extensive collection of high-quality plumbing, sanitary, and electrical products from top brands.
             </p>
           </div>
         </div>
 
-        <section className="py-16">
+        <section className="py-16 bg-gray-100">
           <div className="container mx-auto px-4 md:px-6">
             {productCategories.map((category) => (
               <div key={category.id} id={category.id} className="mb-16">
@@ -96,19 +96,19 @@ const ProductsPage = () => {
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <h2 className="text-2xl font-serif font-semibold text-navy-dark mb-3 flex items-center">
+                      <h2 className="text-2xl font-serif font-semibold text-gray-900 mb-3 flex items-center">
                         <category.icon className="w-5 h-5 mr-2 text-gold" />
                         {category.title}
                       </h2>
-                      <p className="text-gray-600 mb-4">{category.description}</p>
+                      <p className="text-gray-700 mb-4">{category.description}</p>
                       
                       <div className="mt-4">
-                        <h3 className="font-semibold text-navy mb-2">Featured Brands</h3>
+                        <h3 className="font-semibold text-gray-900 mb-2">Featured Brands</h3>
                         <div className="flex flex-wrap gap-2">
                           {category.brands.map((brand) => (
                             <span 
                               key={brand} 
-                              className="inline-block px-3 py-1 bg-champagne-light text-navy-dark rounded-md text-sm"
+                              className="inline-block px-3 py-1 bg-gray-200 text-gray-800 rounded-md text-sm"
                             >
                               {brand}
                             </span>
@@ -121,15 +121,15 @@ const ProductsPage = () => {
                   <div className="lg:col-span-2">
                     <Card className="premium-card">
                       <CardContent className="p-6">
-                        <h3 className="font-semibold text-navy-dark text-lg mb-4">Available Products</h3>
+                        <h3 className="font-semibold text-gray-900 text-lg mb-4">Available Products</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           {category.products.map((product, index) => (
                             <div 
                               key={index}
-                              className="flex items-center p-3 border border-champagne bg-white rounded-md hover:border-gold/50 transition-colors"
+                              className="flex items-center p-3 border border-gray-300 bg-white rounded-md hover:border-gold/50 transition-colors"
                             >
                               <div className="h-2 w-2 rounded-full bg-gold mr-3"></div>
-                              <span className="text-gray-700">{product}</span>
+                              <span className="text-gray-800">{product}</span>
                             </div>
                           ))}
                         </div>
