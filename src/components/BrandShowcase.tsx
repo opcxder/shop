@@ -3,14 +3,15 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const brands = [
   { name: 'Astral', logo: '/public/lovable-uploads/39a5d452-7310-44f3-a0eb-1708c8ebf922.png' },
-  { name: 'Havells', logo: 'Havells' },
-  { name: 'V-Guard', logo: 'V-Guard' },
-  { name: 'Finolex', logo: 'Finolex' },
-  { name: 'Western', logo: 'Western' },
-  { name: 'Bajaj', logo: 'Bajaj' },
-  { name: 'Ashirvad', logo: 'Ashirvad' },
-  { name: 'Texmo', logo: 'Texmo' },
-  { name: 'Kisan', logo: 'Kisan' },
+  { name: 'Havells', logo: '/havells.png' },
+  { name: 'V-Guard', logo: '/v-guard.png' },
+  { name: 'Finolex', logo: '/finolex.png' },
+  { name: 'Western', logo: '/western.png' },
+  { name: 'Bajaj', logo: '/bajaj.png' },
+  { name: 'Ashirvad', logo: '/ashirvad.png' },
+  { name: 'Texmo', logo: '/texmo.jpeg' },
+  { name: 'Kisan', logo: '/kisan.png' },
+  { name: 'Parcos', logo: '/parcos.png' },
 ];
 
 const BrandShowcase = () => {

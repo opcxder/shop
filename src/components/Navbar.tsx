@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -60,7 +59,13 @@ const Navbar = () => {
             >
               About Us
             </Link>
-            <Link to="/contact">
+            <Link 
+              to="/contact"
+              className={cn(
+                "text-gray-700 transition-colors font-medium",
+                isActive('/contact') ? "text-gold font-semibold" : "hover:text-gold"
+              )}
+            >
               <Button className="bg-gold hover:bg-gold-dark text-gray-900">
                 Contact Us
               </Button>
@@ -84,7 +89,7 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <div 
           className={cn(
-            "fixed md:hidden top-[60px] left-0 right-0 bg-gray-300 shadow-md z-40 transition-all duration-300 ease-in-out",
+            "fixed md:hidden top-[64px] left-0 right-0 bg-gray-300 shadow-md z-40 transition-all duration-300 ease-in-out",
             isOpen ? "max-h-screen py-4 opacity-100" : "max-h-0 py-0 opacity-0 overflow-hidden"
           )}
         >
@@ -93,7 +98,7 @@ const Navbar = () => {
               to="/" 
               className={cn(
                 "text-gray-700 hover:text-gold transition-colors py-2 px-4 rounded-md font-medium",
-                isActive('/') && "bg-gray-300 text-gold"
+                isActive('/') && "bg-gray-200 text-gold"
               )}
               onClick={() => setIsOpen(false)}
             >
@@ -103,7 +108,7 @@ const Navbar = () => {
               to="/products" 
               className={cn(
                 "text-gray-700 hover:text-gold transition-colors py-2 px-4 rounded-md font-medium",
-                isActive('/products') && "bg-gray-300 text-gold"
+                isActive('/products') && "bg-gray-200 text-gold"
               )}
               onClick={() => setIsOpen(false)}
             >
@@ -113,7 +118,7 @@ const Navbar = () => {
               to="/about" 
               className={cn(
                 "text-gray-700 hover:text-gold transition-colors py-2 px-4 rounded-md font-medium",
-                isActive('/about') && "bg-gray-300 text-gold"
+                isActive('/about') && "bg-gray-200 text-gold"
               )}
               onClick={() => setIsOpen(false)}
             >
@@ -121,8 +126,11 @@ const Navbar = () => {
             </Link>
             <Link 
               to="/contact"
+              className={cn(
+                "w-full py-2",
+                isActive('/contact') && "bg-gray-200"
+              )}
               onClick={() => setIsOpen(false)}
-              className="py-2"
             >
               <Button className="w-full bg-gold hover:bg-gold-dark text-gray-900">
                 Contact Us

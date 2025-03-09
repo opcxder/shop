@@ -1,8 +1,8 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
+import { Toaster } from '@/components/ui/toaster';
 
 const Contact = () => {
   return (
@@ -22,6 +22,7 @@ const Contact = () => {
         </div>
       </main>
       <Footer />
+      <Toaster />
     </div>
   );
 };

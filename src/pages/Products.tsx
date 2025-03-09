@@ -24,7 +24,7 @@ const productCategories = [
       'Stabilizers'
     ],
     brands: ['Havells', 'V-Guard', 'Finolex', 'Bajaj', 'Western'],
-    imageUrl: '/lovable-uploads/7e3c1515-d36d-4130-af7b-8d074841e924.png',
+    imageUrl: '/electric_solution.png',
   },
   {
     id: 'plumbing',
@@ -44,7 +44,7 @@ const productCategories = [
       'Water Pumps'
     ],
     brands: ['Astral', 'Ashirvad', 'Finolex', 'Kisan'],
-    imageUrl: '/lovable-uploads/e5469ed6-e032-4a70-bc9c-47db106508af.png',
+    imageUrl: '/plumbing_solution.png',
   },
   {
     id: 'sanitary',
@@ -63,8 +63,8 @@ const productCategories = [
       'Kitchen Fittings',
       'Waste Couplings'
     ],
-    brands: ['Astral', 'Texmo', 'Western'],
-    imageUrl: '/lovable-uploads/688b8e5c-2af4-4221-ad65-b86bd8d80dfb.png',
+    brands: ['Astral', 'Texmo', 'Kisan'],
+    imageUrl: '/sanotary_solution.png',
   },
 ];
 

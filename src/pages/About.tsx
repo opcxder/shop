@@ -62,7 +62,7 @@ const AboutPage = () => {
                 <div className="relative">
                   <div className="absolute inset-0 translate-x-4 translate-y-4 border-2 border-gold rounded-lg"></div>
                   <img
-                    src="/lovable-uploads/7adc536f-2487-4073-b895-5157564f41d8.png"
+                    src="/vinayak_enterprises.jpeg"
                     alt="Vinayak Enterprises Store"
                     className="rounded-lg relative z-10 w-full h-auto object-cover shadow-lg"
                   />

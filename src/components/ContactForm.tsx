@@ -1,76 +1,71 @@
-
-import { useState } from 'react';
-import { useToast } from '@/hooks/use-toast';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { 
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage
-} from '@/components/ui/form';
-import { supabase } from '@/integrations/supabase/client';
+import { useToast } from '@/components/ui/use-toast';
+import { supabase } from '../integrations/supabase/client';
+import type { TablesInsert } from '../integrations/supabase/types';
 
-const ContactForm = () => {
+type ContactFormData = TablesInsert<"contact_inquiries">;
+
+const ContactForm: React.FC = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     phone: '',
-    email: '',
-    message: '',
+    message: ''
   });
-
+  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
+    setFormData(prev => ({
       ...prev,
-      [name]: value,
+      [name]: value
     }));
   };
-
+  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validation
+    if (!formData.name || !formData.phone || !formData.message) {
+      toast({
+        title: "Missing information",
+        description: "Please fill out all required fields.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
     
     try {
-      // Insert data into Supabase
-      const { data, error } = await supabase
+      // Submit to Supabase
+      const { error } = await supabase
         .from('contact_inquiries')
-        .insert([
-          { 
-            name: formData.name,
-            phone: formData.phone,
-            email: formData.email || null,
-            message: formData.message
-          }
-        ]);
+        .insert([formData]);
         
       if (error) throw error;
-        
-      console.log('Form submitted to Supabase:', data);
+      
       toast({
-        title: "Contact Request Sent",
-        description: "We will get back to you as soon as possible.",
+        title: "Form submitted successfully",
+        description: "Thank you for contacting us. We'll get back to you soon!",
       });
       
       // Reset form
       setFormData({
         name: '',
         phone: '',
-        email: '',
-        message: '',
+        message: ''
       });
+      
     } catch (error) {
       console.error('Error submitting form:', error);
       toast({
-        title: "Error",
-        description: "There was a problem submitting your request. Please try again.",
-        variant: "destructive"
+        title: "Submission failed",
+        description: "There was an error submitting your message. Please try again later.",
+        variant: "destructive",
       });
     } finally {
       setIsSubmitting(false);
@@ -79,73 +74,60 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="space-y-2">
-          <FormLabel htmlFor="name">Full Name</FormLabel>
-          <Input
-            id="name"
+      <div className="space-y-4">
+        <div>
+          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+            Full Name*
+          </label>
+          <Input 
+            id="name" 
             name="name"
-            placeholder="Your name"
             value={formData.name}
             onChange={handleChange}
-            className="border-cream-dark focus-visible:ring-gold"
+            type="text" 
+            placeholder="Your name" 
+            required 
+          />
+        </div>
+        
+        <div>
+          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+            Phone Number*
+          </label>
+          <Input 
+            id="phone" 
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            type="tel" 
+            placeholder="Your phone number"
             required
           />
         </div>
         
-        <div className="space-y-2">
-          <FormLabel htmlFor="phone">Phone Number</FormLabel>
-          <Input
-            id="phone"
-            name="phone"
-            type="tel"
-            placeholder="Your phone number"
-            value={formData.phone}
+        <div>
+          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+            Message*
+          </label>
+          <Textarea 
+            id="message" 
+            name="message"
+            value={formData.message}
             onChange={handleChange}
-            className="border-cream-dark focus-visible:ring-gold"
-            required
+            placeholder="How can we help you?" 
+            rows={4} 
+            required 
           />
         </div>
       </div>
       
-      <div className="space-y-2">
-        <FormLabel htmlFor="email">Email Address</FormLabel>
-        <Input
-          id="email"
-          name="email"
-          type="email"
-          placeholder="Your email address (optional)"
-          value={formData.email}
-          onChange={handleChange}
-          className="border-cream-dark focus-visible:ring-gold"
-        />
-      </div>
-      
-      <div className="space-y-2">
-        <FormLabel htmlFor="message">Message</FormLabel>
-        <Textarea
-          id="message"
-          name="message"
-          placeholder="How can we help you?"
-          rows={4}
-          value={formData.message}
-          onChange={handleChange}
-          className="border-cream-dark focus-visible:ring-gold"
-          required
-        />
-      </div>
-      
-      <Button
-        type="submit"
-        className="w-full bg-gradient-to-r from-gold to-gold-light hover:from-gold-dark hover:to-gold text-burgundy-dark"
+      <Button 
+        type="submit" 
+        className="w-full bg-gold hover:bg-gold-dark text-gray-900"
         disabled={isSubmitting}
       >
-        {isSubmitting ? 'Sending...' : 'Send Message'}
+        {isSubmitting ? "Sending..." : "Send Message"}
       </Button>
-      
-      <p className="text-sm text-gray-500 text-center">
-        We'll get back to you as soon as possible.
-      </p>
     </form>
   );
 };
