@@ -27,7 +27,7 @@ const AboutSection = () => {
             <div className="relative">
               <div className="absolute inset-0 -translate-x-4 -translate-y-4 border-2 border-gold rounded-lg"></div>
               <img
-                src="/vinayak_enterprises.jpeg"
+                src="/about-image.jpeg"
                 alt="Vinayak Enterprises Store"
                 className="rounded-lg relative z-10 w-full h-auto object-cover shadow-lg"
               />

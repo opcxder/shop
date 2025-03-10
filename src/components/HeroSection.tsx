@@ -10,7 +10,7 @@ const HeroSection = () => {
             Your Trusted Partner For 25+ Years
           </h2>
           <p className="text-base md:text-lg lg:text-xl mb-6 md:mb-8 text-gray-700 animate-fade-in" style={{animationDelay: '0.2s'}}>
-            Providing quality plumbing, sanitary, and electrical products from top brands to residential and commercial customers since 1997.
+            Providing quality plumbing, sanitary, and electrical products from top brands to residential and commercial customers since 1996.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 animate-fade-in" style={{animationDelay: '0.4s'}}>
             <Link to="/products" className="w-full sm:w-auto">

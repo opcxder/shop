@@ -19,7 +19,6 @@ const productCategories = [
       'Fans & Exhausts',
       'Geysers & Water Heaters',
       'Switchgears',
-      'Conduits & Accessories',
       'Inverters & Batteries',
       'Stabilizers'
     ],
@@ -36,8 +35,6 @@ const productCategories = [
       'CPVC Pipes & Fittings',
       'UPVC Pipes & Fittings',
       'GI Pipes & Fittings',
-      'PEX Pipes',
-      'PPR Pipes',
       'Bathroom Fittings',
       'Valves & Controls',
       'Water Tanks',
