@@ -17,7 +17,7 @@ const CTASection = () => {
               Contact Us
             </Button>
           </Link>
-          <a href="tel:+918889371921">
+          <a href="tel:+919753255523">
             <Button size="lg" variant="outline" className="border-gray-400 text-gray-800 hover:bg-gray-300 shadow-sm w-full sm:w-auto">
               <Phone className="mr-2 h-4 w-4" /> Call Now
             </Button>

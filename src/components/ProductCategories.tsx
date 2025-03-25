@@ -14,7 +14,7 @@ const categories = [
     title: 'Plumbing Solutions',
     icon: Droplet,
     description: 'Comprehensive plumbing materials including pipes, fittings, taps, valves, and accessories for all your water supply and drainage needs.',
-    imageUrl: '/pluming_solution.png', 
+    imageUrl: '/plumbing_solution.png', 
   },
   {
     id: 'sanitary',
